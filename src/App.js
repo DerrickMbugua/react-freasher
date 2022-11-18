@@ -7,6 +7,7 @@ function App() {
       <Todo text="Learning props" />
       <Todo text="Mastering props" />
       <Todo text="God level props" />
+
     </div>
   );
 }

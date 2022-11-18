@@ -1,8 +1,11 @@
+import { useState } from 'react';
+import Modal from './Modal';
+
 function Todo(props) {
+  const [showModal, setModalOpen] = useState(false);
 
   function deleteHandler() {
-    console.log("Testing!");
-    console.log(props.text);
+    setModalOpen(true);
   }
 
   return (
@@ -15,6 +18,7 @@ function Todo(props) {
         Delete
 
       </button>
+      {showModal ? <Modal /> : null}
     </div>
 
   );
