@@ -4,7 +4,9 @@ function App() {
   return (
     <div className="App">
       <h1>My Todos</h1>
-      <Todo />
+      <Todo text="Learning props" />
+      <Todo text="Mastering props" />
+      <Todo text="God level props" />
     </div>
   );
 }
