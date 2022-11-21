@@ -17,7 +17,17 @@ function NewStaffForm() {
       department: entererdDepartment,
     };
 
-    console.log(staffs);
+    fetch('https://react-http-requests-3b378-default-rtdb.firebaseio.com/staffs.json',
+      {
+        method: 'POST',
+        body: JSON.stringify(staffs),
+        headers: {
+          'Content-Type': 'application/json'
+        }
+      }
+    )
+
+    console.log('success');
 
   }
 
