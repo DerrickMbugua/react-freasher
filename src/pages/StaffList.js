@@ -1,3 +1,5 @@
+import AllStaff from "../staffs/AllStaffs";
+
 const DummyData = [
   {
     id: '1',
@@ -16,11 +18,7 @@ function StaffListPage() {
   return (
     <div>
       <h1>All Staff</h1>
-      <ul>
-        {DummyData.map((staff) => {
-          return <li key={staff.id}>{staff.name}</li>
-        })}
-      </ul>
+      <AllStaff staffs={DummyData} />
     </div>
   );
 
