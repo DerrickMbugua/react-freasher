@@ -1,9 +1,11 @@
 import { useRef } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 function NewStaffForm() {
 
   const nameRef = useRef();
   const departmentRef = useRef();
+  const history = useNavigate();
 
 
   function submitHandler(event) {
@@ -25,7 +27,9 @@ function NewStaffForm() {
           'Content-Type': 'application/json'
         }
       }
-    )
+    ).then(() => {
+      history('/', { replace: true });
+    });
 
     console.log('success');
 
